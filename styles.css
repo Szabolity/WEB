@@ -928,6 +928,7 @@ body.dark-theme .testimonial-nav {
   }
 
   .testimonial-card {
+    min-height: fit-content;
     padding: 2.4rem 1.8rem;
   }
 
@@ -938,7 +939,7 @@ body.dark-theme .testimonial-nav {
   .testimonial-nav {
     top: auto;
     bottom: 1rem;
-    transform: none;
+    transform: translateY(0);
   }
 
   .testimonial-prev {
