@@ -744,6 +744,38 @@ textarea:focus {
   transform: scale(1.05);
 }
 
+/* Plan Your Stay button – always white (feeling section only) */
+.feeling-section .feature-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  color: #fff;
+  border: 2px solid #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  border-radius: 0.15rem;
+  padding: 0.55rem 2rem;
+  transition: 0.25s ease;
+}
+
+.feeling-section .feature-button:hover {
+  background: #f3f4f6;
+  color: var(--blue-deep);
+}
+
+/* dark mode – keep the button white too */
+body.dark-theme .feeling-section .feature-button {
+  color: #fff;
+  border-color: #ffffff;
+}
+
+body.dark-theme .feeling-section .feature-button:hover {
+  background: #e5e7eb;
+  color: #000000;
+}
+
+
 /* DARK MODE */
 body.dark-theme .feature-section {
   background: #020617;
@@ -1137,6 +1169,21 @@ body.dark-theme .section {
   background: #020617;
 }
 
+body.dark-theme .about-values-section {
+  background-image: url("https://images.pexels.com/photos/261204/pexels-photo-261204.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.dark-theme .feeling-section {
+  background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
 body.dark-theme .section-alt,
 body.dark-theme .page-hero {
   background-color: #030712;
@@ -1450,3 +1497,430 @@ body.dark-theme .social-links a .icon svg {
 body.dark-theme .contact-icon {
   filter: brightness(300%);
 }
+
+/* ===========================
+   ABOUT PAGE HERO
+   =========================== */
+.about-hero {
+  position: relative;
+  padding: 5rem 1.5rem 4rem;
+  color: #ffffff;
+
+  background-image: url("https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.75)
+  );
+  z-index: 0;
+}
+
+.about-hero .page-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero .intro-label,
+.about-hero h1,
+.about-hero p {
+  color: #ffffff;
+}
+
+/* Dark mode – keep image, slightly stronger overlay */
+body.dark-theme .about-hero {
+  background-image: url("https://images.pexels.com/photos/248797/pexels-photo-248797.jpeg");
+}
+
+body.dark-theme .about-hero::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0.9)
+  );
+}
+
+/* ===========================
+   ABOUT PAGE CONTENT
+   =========================== */
+
+.about-intro {
+  text-align: center;
+}
+
+.about-script-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: var(--blue-deep);
+  margin-bottom: 1rem;
+}
+
+body.dark-theme .about-script-heading {
+  color: #ffffff;
+}
+
+body.dark-theme .about-intro-text {
+  color: #d1d5db;
+}
+
+.about-intro-text {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* Two-column story layout */
+.about-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 0.75rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.about-story h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-story p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 0.9rem;
+}
+
+.about-values-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+
+/* Values / pillars */
+.about-values-heading {
+  text-align: center;
+  margin-bottom: 0.75rem;
+}
+
+/* WHAT MATTERS MOST – IMAGE BACKGROUND */
+.about-values-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  background-image: url("https://images.pexels.com/photos/261204/pexels-photo-261204.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+/* soft overlay for readability */
+.about-values-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 21, 43, 0.45),
+    rgba(0, 21, 43, 0.8)
+  );
+  z-index: 0;
+}
+
+/* keep the inner content above overlay */
+.about-values-section .section-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* make text white in this section */
+.about-values-section .about-values-heading,
+.about-values-section .section-intro,
+.about-values-section .about-value-card h3,
+.about-values-section .about-value-card p {
+  color: #ffffff;
+}
+
+/* cards look a bit more “glass” on the photo */
+.about-values-section .about-value-card {
+  background: rgba(248, 243, 230, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(6px);
+}
+
+.about-values-grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.75rem;
+}
+
+.about-value-card {
+  background: #ffffff;
+  border-radius: 1rem;
+  padding: 1.7rem 1.9rem;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-values-section .about-value-card {
+  background: rgba(248, 243, 230, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(6px);
+}
+
+.about-value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.about-value-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.about-value-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+}
+
+.about-mission,
+.about-team {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-mission h2,
+.about-team h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-mission p,
+.about-team p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* OUR TEAM – TEXT LEFT, IMAGE RIGHT */
+.about-team-section {
+}
+
+.about-team-inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-team-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-team-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1rem;
+}
+
+.about-team-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.22);
+  object-fit: cover;
+}
+
+/* Stack on mobile */
+@media (max-width: 900px) {
+  .about-team-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .about-team-photo {
+    order: -1;
+  }
+}
+
+@media (max-width: 900px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-image {
+    order: -1; 
+  }
+}
+body.dark-theme .about-values-section .section-intro {
+  color: #e5e7eb; 
+}
+
+body.dark-theme .about-story p {
+  color: #e5e7eb;  
+}
+/* Dark mode text color */
+body.dark-theme .about-team-text p {
+  color: #d1d5db;
+}
+
+
+/* Experience / CTA block */
+.about-experience {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.about-experience h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.about-experience p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.about-experience .feature-button {
+  margin-top: 1.2rem;
+  background: #ffffff;
+  color: var(--blue-deep);
+  border-color: #ffffff;
+}
+
+.about-experience .feature-button:hover {
+  background: #f3f4f6;
+  color: var(--blue-deep);
+}
+
+/* dark mode: still white button */
+body.dark-theme .about-experience .feature-button {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+}
+
+body.dark-theme .about-experience .feature-button:hover {
+  background: #e5e7eb;
+  color: #000000;
+}
+
+.about-values-section .about-value-card {
+  background: rgba(248, 243, 230, 0.333);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+body.dark-theme .about-values-section .about-value-card {
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+/* FEELING SECTION – IMAGE BACKGROUND */
+.feeling-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg"); /* change this photo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.feeling-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0.75)
+  );
+  z-index: 0;
+}
+
+.feeling-section .section-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  max-width: 780px;
+}
+
+.feeling-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.feeling-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.9;
+  color: #e5e7eb;
+}
+
+/* Dark mode – same, just a bit stronger text */
+body.dark-theme .feeling-text {
+  color: #f3f4f6;
+}
+
+
+/* Dark mode tweaks */
+body.dark-theme .about-value-card {
+  background: #020617;
+  border: 1px solid #1f2937;
+  box-shadow: none;
+}
+
+body.dark-theme .about-value-card:hover {
+  box-shadow: 0 10px 20px rgba(255,255,255,0.08);
+}
+
+body.dark-theme .about-mission p,
+body.dark-theme .about-team p {
+  color: #d1d5db;
+}
+
+body.dark-theme .about-values-heading {
+  color: var(--ivory);
+}
+
