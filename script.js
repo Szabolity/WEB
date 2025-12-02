@@ -160,3 +160,34 @@ if (testimonialCard) {
   testimonialCard.addEventListener("mouseleave", startAuto);
 }
 
+// ===========================
+// FAQ ACCORDION
+// ===========================
+const faqItems = document.querySelectorAll(".faq-item");
+
+if (faqItems.length) {
+  faqItems.forEach((item) => {
+    const button = item.querySelector(".faq-question");
+    const answer = item.querySelector(".faq-answer");
+
+    if (!button || !answer) return;
+
+    button.addEventListener("click", () => {
+      const isOpen = item.classList.contains("is-open");
+
+      // close any other open items (optional, for "one at a time")
+      faqItems.forEach((other) => {
+        if (other !== item) {
+          other.classList.remove("is-open");
+        }
+      });
+
+      // toggle this one
+      if (!isOpen) {
+        item.classList.add("is-open");
+      } else {
+        item.classList.remove("is-open");
+      }
+    });
+  });
+}
