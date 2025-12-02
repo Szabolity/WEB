@@ -206,8 +206,8 @@ body.dark-theme .nav-book-button:hover {
 
 /* Night / light toggle – icon only, no ring */
 .mode-toggle {
-  width: 28px;
-  height: 28px;
+  width: 14px;
+  height: 14px;
   padding: 0;
   margin-left: 1.1rem;
   cursor: pointer;
