@@ -206,8 +206,8 @@ body.dark-theme .nav-book-button:hover {
 
 /* Night / light toggle – icon only, no ring */
 .mode-toggle {
-  width: 14px;
-  height: 14px;
+  width: 16px;
+  height: 16px;
   padding: 0;
   margin-left: 1.1rem;
   cursor: pointer;
@@ -221,12 +221,12 @@ body.dark-theme .nav-book-button:hover {
 
 /* Light mode (moon icon) */
 .mode-toggle {
-  background-image: url("NightIcon.png");
+  background-image: url("/NightIcon.png");
 }
 
 /* Dark mode (sun icon) */
 .mode-toggle.is-dark {
-  background-image: url("LightIcon.png");
+  background-image: url("/LightIcon.png");
 }
 
 /* HERO SECTION (home page) */
@@ -1249,7 +1249,7 @@ body.dark-theme .footer {
     bottom: 0;
 
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0;
 
     background: #ffffff;
@@ -1279,7 +1279,7 @@ body.dark-theme .footer {
   }
 
   .nav-links li.nav-book-now {
-    margin-left: 1.8;
+    margin-left: 0;
   }
 
   .mode-toggle {
