@@ -59,17 +59,18 @@ main {
   align-items: stretch;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: nowrap;
 }
 
 /* Blue logo block – extended a bit lower */
 .logo-block {
   background: var(--blue-deep);
   color: white;
-  padding: 1.2rem 2rem 1.8rem;
+  padding: 1rem 1.5rem 1.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 230px;
+  min-width: 190px;
   margin-bottom: -20px;
 }
 
@@ -106,7 +107,7 @@ main {
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 0.9rem;
   font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
@@ -146,8 +147,16 @@ main {
 }
 
 .nav-links li.nav-book-now {
-  margin-left: auto;
+    margin-left: 0 !important;
+    align-self: flex-start;   /* ensures it stays left */
 }
+
+/* Optional: add spacing */
+  .nav-links li.nav-book-now a {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
 
 /* NAV TOGGLE (mobile) */
 .nav-toggle {
@@ -172,11 +181,11 @@ main {
 /* BOOK NOW button in nav */
 .nav-book-button {
   display: inline-block;
-  padding: 0.1em 1rem;
+  padding: 0.1em 0.75rem;
   background: transparent;
   border: 2px solid #000;
   color: #000;
-  font-size: 0.85rem;
+  font-size: 0.78rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 500;
@@ -206,8 +215,8 @@ body.dark-theme .nav-book-button:hover {
 
 /* Night / light toggle – icon only, no ring */
 .mode-toggle {
-  width: 16px;
-  height: 16px;
+  width: 28px;
+  height: 28px;
   padding: 0;
   margin-left: 1.1rem;
   cursor: pointer;
@@ -221,12 +230,12 @@ body.dark-theme .nav-book-button:hover {
 
 /* Light mode (moon icon) */
 .mode-toggle {
-  background-image: url("/NightIcon.png");
+  background-image: url("NightIcon.png");
 }
 
 /* Dark mode (sun icon) */
 .mode-toggle.is-dark {
-  background-image: url("/LightIcon.png");
+  background-image: url("LightIcon.png");
 }
 
 /* HERO SECTION (home page) */
@@ -1226,7 +1235,7 @@ body.dark-theme .footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .logo-block {
     margin-bottom: 0;
     min-width: 200px;
@@ -1249,7 +1258,7 @@ body.dark-theme .footer {
     bottom: 0;
 
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0;
 
     background: #ffffff;
@@ -1279,7 +1288,7 @@ body.dark-theme .footer {
   }
 
   .nav-links li.nav-book-now {
-    margin-left: 0;
+    margin-left: 1.8;
   }
 
   .mode-toggle {
@@ -2318,4 +2327,3 @@ body.dark-theme .terms-section a {
 body.dark-theme .terms-section a:hover {
   color: #a3d8ff !important;
 }
-
