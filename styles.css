@@ -1924,3 +1924,331 @@ body.dark-theme .about-values-heading {
   color: var(--ivory);
 }
 
+/* ===========================
+   FAQS HERO (optional subtle style)
+   =========================== */
+
+.faqs-hero {
+  /* re-use page-hero spacing but you can tweak */
+  padding: 4rem 1.5rem 2.5rem;
+}
+
+body.dark-theme .faqs-hero {
+  background-color: #030712; /* matches your other subpages in dark mode */
+}
+
+/* ===========================
+   FAQS SECTION
+   =========================== */
+
+.faqs-intro {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.faqs-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.1rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-dark);
+}
+
+.faqs-hero {
+  position: relative;
+  padding: 5rem 1.5rem 4rem;
+
+  background-image: url("https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg"); /* replace if you want */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+}
+
+/* dark overlay for readability */
+.faqs-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.8)
+  );
+  z-index: 0;
+}
+
+.faqs-hero .page-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* white text */
+.faqs-hero .intro-label,
+.faqs-hero h1,
+.faqs-hero p {
+  color: #ffffff;
+}
+
+/* Dark mode — keep the same image but stronger overlay */
+body.dark-theme .faqs-hero {
+  background-image: url("https://images.pexels.com/photos/457882/pexels-photo-457882.jpeg");
+}
+
+body.dark-theme .faqs-hero::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.95)
+  );
+}
+
+
+.faqs-text {
+  max-width: 640px;
+  margin: 0 auto;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+}
+
+/* dark mode */
+body.dark-theme .faqs-heading {
+  color: #e5e7eb;
+}
+
+body.dark-theme .faqs-text {
+  color: #9ca3af;
+}
+
+/* grid layout */
+.faqs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+
+.faqs-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* FAQ item */
+.faq-item {
+  border-radius: 0.75rem;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.04);
+}
+
+/* dark mode item */
+body.dark-theme .faq-item {
+  background: #020617;
+  border-color: #1f2937;
+  box-shadow: none;
+}
+
+/* question button */
+.faq-question {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 1.3rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  color: var(--text-dark);
+}
+
+body.dark-theme .faq-question {
+  color: #e5e7eb;
+}
+
+/* plus icon */
+.faq-icon {
+  font-size: 1.25rem;
+  margin-left: 1rem;
+  transition: transform 0.2s ease;
+}
+
+/* answer wrapper (accordion) */
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.3rem;
+  transition: max-height 0.26s ease, padding-bottom 0.26s ease;
+}
+
+.faq-answer p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0.8rem 0 1.2rem;
+}
+
+/* dark mode answer text */
+body.dark-theme .faq-answer p {
+  color: #d1d5db;
+}
+
+/* when open */
+.faq-item.is-open .faq-answer {
+  max-height: 300px;        /* big enough for most answers */
+  padding-bottom: 0.75rem;
+}
+
+.faq-item.is-open .faq-icon {
+  transform: rotate(45deg);  /* turns + into × */
+}
+
+/* hover state */
+.faq-question:hover {
+  background: rgba(31, 41, 55, 0.02);
+}
+
+body.dark-theme .faq-question:hover {
+  background: rgba(148, 163, 184, 0.05);
+}
+
+/* MOBILE */
+@media (max-width: 900px) {
+  .faqs-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===========================
+   PRIVACY HERO (with background image)
+   =========================== */
+.privacy-hero {
+  position: relative;
+  padding: 5rem 1.5rem 4rem;
+
+  background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg"); /* swap if you like */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  color: #ffffff;
+}
+
+/* overlay */
+.privacy-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.85)
+  );
+  z-index: 0;
+}
+
+.privacy-hero .page-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.privacy-hero .intro-label,
+.privacy-hero h1,
+.privacy-hero p {
+  color: #ffffff;
+}
+
+/* Dark mode – keep same image, stronger overlay */
+body.dark-theme .privacy-hero {
+  background-image: url("https://images.pexels.com/photos/258154/pexels-photo-258154.jpeg");
+}
+
+body.dark-theme .privacy-hero::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.95)
+  );
+}
+
+/* ===========================
+   LEGAL CONTENT STYLING
+   =========================== */
+.legal-content {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #000000;
+}
+
+.legal-content h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.35rem;
+  font-weight:bolder;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  text-align: left;
+}
+
+.legal-content p {
+  margin-bottom: 0.8rem;
+}
+
+.legal-content ul {
+  margin: 0 0 1rem 1.3rem;
+  padding: 0;
+}
+
+.legal-content li {
+  margin-bottom: 0.35rem;
+}
+
+.legal-content .legal-disclaimer {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* dark mode base */
+body.dark-theme .legal-content {
+  color: #d1d5db;
+}
+
+body.dark-theme .legal-content .legal-disclaimer {
+  color: #9ca3af;
+}
+
+/* ===========================
+   PRIVACY PAGE LINK FIX
+   =========================== */
+
+/* normal mode */
+.privacy-section a {
+  color: var(--blue-medium);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.privacy-section a:hover {
+  text-decoration: underline;
+}
+
+/* dark mode — improved visibility */
+body.dark-theme .privacy-section a {
+  color: #73c0ff !important;
+  font-weight: 600;
+}
+
+body.dark-theme .privacy-section a:hover {
+  color: #b3e2ff !important;
+}
