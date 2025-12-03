@@ -238,8 +238,9 @@ body.dark-theme .nav-book-button:hover {
   }
 
   .logo-block {
+    position: relative;
+    width: 150px;
     padding-top: 75px;
-    box-sizing: border-box;
   }
 
     .nav-toggle {
@@ -2595,5 +2596,6 @@ body.dark-theme .gallery-tile {
     column-count: 1;
   }
 }
+
 
 
