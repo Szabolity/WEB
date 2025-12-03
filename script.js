@@ -58,7 +58,7 @@ if (testimonialCard) {
   const testimonials = [
     {
       quote:
-        '“Salamangka felt like a hidden sanctuary. <span class="highlight">The staff went out of their way to remember our names and preferences</span>, and every evening felt like a private celebration by the sea.”',
+        '“Aurelia felt like a hidden sanctuary. <span class="highlight">The staff went out of their way to remember our names and preferences</span>, and every evening felt like a private celebration by the sea.”',
       author: "– Mia L., Manila",
       meta: "Stayed with us in March 2024",
     },
