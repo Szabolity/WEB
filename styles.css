@@ -56,13 +56,13 @@ main {
 
 .header-inner {
   display: flex;
-  align-items: stretch;
+  align-items: flex-start;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: nowrap;
+  height: 83px;
 }
 
-/* Blue logo block – extended a bit lower */
 .logo-block {
   background: var(--blue-deep);
   color: white;
@@ -81,13 +81,6 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-.logo-text {
-  font-family: "Georgia", "Times New Roman", serif;
-  font-size: 1.7rem;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
 }
 
 /* NAVIGATION */
@@ -2602,4 +2595,5 @@ body.dark-theme .gallery-tile {
     column-count: 1;
   }
 }
+
 
