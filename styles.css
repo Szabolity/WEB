@@ -238,6 +238,22 @@ body.dark-theme .nav-book-button:hover {
   background-image: url("LightIcon.png");
 }
 
+@media (max-width: 1100px) {
+  .header-inner {
+    height: 83px;
+    align-items: center;
+  }
+
+  .logo-block {
+    padding-top: 75px;
+    box-sizing: border-box;
+  }
+
+    .nav-toggle {
+    align-self: center;
+  }
+}
+
 /* HERO SECTION (home page) */
 .hero {
   position: relative;
@@ -2586,3 +2602,4 @@ body.dark-theme .gallery-tile {
     column-count: 1;
   }
 }
+
