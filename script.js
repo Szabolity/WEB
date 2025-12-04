@@ -243,3 +243,64 @@ if (contactForm) {
     }
   });
 }
+
+// ===========================
+// Room carousels (auto + manual)
+// ===========================
+(function () {
+  const carousels = document.querySelectorAll('.room-carousel');
+  if (!carousels.length) return;
+
+  carousels.forEach((carousel) => {
+    const track = carousel.querySelector('.room-carousel-track');
+    const slides = Array.from(track.children);
+    const prevBtn = carousel.querySelector('.room-carousel-nav.prev');
+    const nextBtn = carousel.querySelector('.room-carousel-nav.next');
+
+    let index = 0;
+    let intervalId = null;
+
+    function goToSlide(newIndex) {
+      index = (newIndex + slides.length) % slides.length;
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function startAuto() {
+      if (intervalId) return;
+      intervalId = setInterval(() => {
+        goToSlide(index + 1);
+      }, 3000); // 3 seconds
+    }
+
+    function stopAuto() {
+      if (!intervalId) return;
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        stopAuto();
+        goToSlide(index - 1);
+        startAuto();
+      });
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        stopAuto();
+        goToSlide(index + 1);
+        startAuto();
+      });
+    }
+
+    // Pause on hover (desktop)
+    carousel.addEventListener('mouseenter', stopAuto);
+    carousel.addEventListener('mouseleave', startAuto);
+
+    // Kick things off
+    goToSlide(0);
+    startAuto();
+  });
+})();
+
