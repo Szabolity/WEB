@@ -1206,7 +1206,7 @@ body.dark-theme .feeling-section {
 
 body.dark-theme .section-alt,
 body.dark-theme .page-hero {
-  background-color: #030712;
+  background-color: #040921;
 }
 
 body.dark-theme .card,
@@ -1352,6 +1352,19 @@ body.nav-open {
     font-size: 0.9rem;
     line-height: 1.7;
     max-width: 100%;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0rem;
+  }
+
+  .footer-links {
+    justify-content: center;
+    text-align: center;
+    margin-top: -0.2rem;
   }
 }
 
@@ -2597,6 +2610,7 @@ body.dark-theme .gallery-tile {
     column-count: 1;
   }
 }
+
 
 
 
