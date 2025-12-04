@@ -2927,6 +2927,8 @@ body.dark-theme .gallery-hero::before {
   overflow: hidden;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
   break-inside: avoid;
+  position: relative;
+  isolation: isolate;
 }
 
 .gallery-tile img {
@@ -2935,10 +2937,13 @@ body.dark-theme .gallery-hero::before {
   height: auto;
   object-fit: cover;
   transition: transform 0.35s ease, filter 0.35s ease;
+  transform: scale(1) translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .gallery-tile:hover img {
-  transform: scale(1.08);
+  transform: scale(1.08) translateZ(0);
   filter: brightness(1.06);
 }
 
