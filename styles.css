@@ -3055,4 +3055,42 @@ body.dark-theme .gallery-tile {
   }
 }
 
+/* UNIVERSAL CAROUSEL HEIGHT UPGRADE */
+.carousel-container,
+.room-carousel,
+.amenity-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.carousel-container img,
+.room-carousel img,
+.amenity-carousel img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .carousel-container img,
+  .room-carousel img,
+  .amenity-carousel img {
+    height: 420px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .carousel-container img,
+  .room-carousel img,
+  .amenity-carousel img {
+    height: 340px;
+  }
+}
+
+
+
 
