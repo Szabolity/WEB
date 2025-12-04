@@ -2609,7 +2609,51 @@ body.dark-theme .gallery-tile {
   }
 }
 
-/* WAKAIA-STYLE FULL-WIDTH ROOMS */
+/* ROOMS INTRO */
+.rooms-intro {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+
+.rooms-intro .intro-body-large {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 2rem auto;
+  color: var(--text-dark);
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .rooms-intro .intro-body-large {
+    font-size: 1.3rem;
+    line-height: 1.55;
+    max-width: 95%;
+  }
+}
+
+@media (max-width: 600px) {
+  .rooms-intro {
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .rooms-intro .intro-body-large {
+    font-size: 1.15rem;
+    line-height: 1.55;
+  }
+}
+
+/* Dark mode readability */
+body.dark-theme .rooms-intro .intro-body-large {
+  color: #e5e7eb;
+}
+
+body.dark-theme .rooms-intro .intro-body {
+  color: #d1d5db;
+}
+
 
 .room-section {
   margin-bottom: 80px;
@@ -2655,16 +2699,179 @@ body.dark-theme .gallery-tile {
 }
 
 .room-features {
-  margin: 0 auto 28px; /* center the list block within the centered parent */
-  display: inline-block; /* allow the ul to be centered while keeping its contents left-aligned */
-  text-align: left; /* left-align the bullet points */
-  width: min(560px, 92%); /* constrain width so it doesn't stretch too wide */
-  padding-left: 1.25rem; /* keep bullets indented nicely */
+  margin: 0 auto 28px;
+  display: inline-block;
+  text-align: left; 
+  width: min(560px, 92%); 
+  padding-left: 1.25rem; 
 }
 
 .room-features li {
   margin-bottom: 6px;
   list-style: circle;
 }
+
+/* ===========================
+   ROOM CAROUSELS & DETAILS
+   =========================== */
+
+.room-carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-soft);
+  margin-bottom: 1.8rem;
+}
+
+.room-carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+}
+
+.room-carousel-slide {
+  min-width: 100%;
+}
+
+.room-carousel-slide img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+.room-carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(0, 0, 0, 0.55);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.room-carousel-nav.prev {
+  left: 0.75rem;
+}
+
+.room-carousel-nav.next {
+  right: 0.75rem;
+}
+
+.room-carousel-nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.06);
+}
+
+/* Room text block */
+
+.room-details {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.room-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--blue-medium);
+  margin-bottom: 0.75rem;
+}
+
+.room-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.9rem;
+  margin-bottom: 0.6rem;
+}
+
+.room-lede,
+.room-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.6rem;
+}
+
+.room-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.room-price span {
+  font-size: 1.1rem;
+}
+
+/* Dark mode overrides for room details */
+body.dark-theme .room-label {
+  color: var(--ivory);
+}
+
+body.dark-theme .room-title {
+  color: #e5e7eb;
+}
+
+body.dark-theme .room-lede,
+body.dark-theme .room-description {
+  color: #d1d5db;
+}
+
+body.dark-theme .room-price {
+  color: #f9fafb;
+}
+
+body.dark-theme .room-features li {
+  color: #e5e7eb;
+}
+
+
+/* for rooms cta */
+.final-rooms-cta {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: -7rem;
+}
+
+.final-rooms-cta h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.final-rooms-cta p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  margin-bottom: 1.2rem;
+}
+
+
+
+/* dark mode text for this block */
+body.dark-theme .final-rooms-cta p {
+  color: #d1d5db;
+}
+
+
+@media (max-width: 600px) {
+  .room-carousel-slide img {
+    height: 240px;
+  }
+}
+
 
 
