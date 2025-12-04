@@ -141,7 +141,7 @@ main {
 
 .nav-links li.nav-book-now {
     margin-left: 0 !important;
-    align-self: flex-start;
+    align-self: flex-center;
 }
 
 /* Optional: add spacing */
@@ -239,8 +239,8 @@ body.dark-theme .nav-book-button:hover {
 
   .logo-block {
     position: relative;
-    width: 150px;
-    padding-top: 75px;
+    width: 130px;
+    padding-top: 55px;
     z-index: 5000;
   }
 
@@ -2597,6 +2597,7 @@ body.dark-theme .gallery-tile {
     column-count: 1;
   }
 }
+
 
 
 
