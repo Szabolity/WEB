@@ -2352,6 +2352,7 @@ body.dark-theme .terms-section a:hover {
   color: #a3d8ff !important;
 }
 
+
 /* ===========================
    AMENITIES
    =========================== */
@@ -2457,7 +2458,7 @@ body.dark-theme .rooms-hero::before {
 .room-grid .room-card {
   display: flex;
   flex-direction: column;
-  gap: 1 rem;
+  gap: 1rem;
 }
 
 .room-image-wrapper {
@@ -2511,102 +2512,6 @@ body.dark-theme .rooms-hero::before {
 /* dark mode tweaks */
 body.dark-theme .room-meta {
   color: #9ca3af;
-}
-
-/* ===========================
-   GALLERY HERO
-   =========================== */
-
-.gallery-hero {
-  position: relative;
-  padding: 5rem 1.5rem 4rem;
-  background-image: url("https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-}
-
-.gallery-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.45),
-    rgba(0, 0, 0, 0.8)
-  );
-  z-index: 0;
-}
-
-.gallery-hero .page-hero-inner {
-  position: relative;
-  z-index: 1;
-}
-
-.gallery-hero .intro-label,
-.gallery-hero h1,
-.gallery-hero p {
-  color: #ffffff;
-}
-
-body.dark-theme .gallery-hero::before {
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.6),
-    rgba(0, 0, 0, 0.95)
-  );
-}
-
-/* ===========================
-  MASONRY GALLERY
-  =========================== */
-
-.gallery-masonry {
-  column-count: 3;
-  column-gap: 1.1rem;
-  column-fill: balance;
-  margin-top: 2rem;
-}
-
-.gallery-tile {
-  
-  width: 100%;
-  overflow: hidden;
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
-  break-inside: avoid;
-  margin-bottom: 1.1rem;
-}
-
-.gallery-tile img {
-  display: block;
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  transition: transform 0.35s ease, filter 0.35s ease;
-}
-
-.gallery-tile:hover img {
-  transform: scale(1.08);
-  filter: brightness(1.06);
-}
-
-/* Dark mode */
-body.dark-theme .gallery-tile {
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
-}
-
-/* Responsive columns */
-@media (max-width: 1000px) {
-  .gallery-masonry {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 600px) {
-  .gallery-masonry {
-    column-count: 1;
-  }
 }
 
 /* ROOMS INTRO */
@@ -2677,7 +2582,7 @@ body.dark-theme .rooms-intro .intro-body {
   margin: 40px auto;
   padding: 0 20px;
   color: #002a4d;
-  text-align: center; /* center the text block horizontally */
+  text-align: center;
 
 }
 
@@ -2859,13 +2764,9 @@ body.dark-theme .room-features li {
   margin-bottom: 1.2rem;
 }
 
-
-
-/* dark mode text for this block */
 body.dark-theme .final-rooms-cta p {
   color: #d1d5db;
 }
-
 
 @media (max-width: 600px) {
   .room-carousel-slide img {
@@ -2873,5 +2774,186 @@ body.dark-theme .final-rooms-cta p {
   }
 }
 
+/* AMENITIES — intro section */
+.amenities-intro {
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+}
+
+.amenities-intro .intro-body-large {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: 2rem auto;
+  color: var(--text-dark);
+}
+
+@media (max-width: 900px) {
+  .amenities-intro .intro-body-large {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .amenities-intro {
+    padding-top: 3.5rem;
+    padding-bottom: 3rem;
+  }
+
+  .amenities-intro .intro-body-large {
+    font-size: 1.15rem;
+  }
+}
+
+body.dark-theme .amenities-intro .intro-body-large,
+body.dark-theme .amenities-intro .intro-body {
+  color: #e5e7eb;
+}
+
+/* EVENINGS & ACTIVE MOMENTS */
+.evening-section .evening-grid {
+  align-items: stretch;
+}
+
+.evening-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.evening-img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.evening-card h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.evening-card p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.evening-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.evening-list li {
+  margin-bottom: 0.35rem;
+}
+
+/* dark mode */
+body.dark-theme .evening-card p,
+body.dark-theme .evening-list {
+  color: #d1d5db;
+}
 
 
+/* ===========================
+   GALLERY HERO
+   =========================== */
+
+.gallery-hero {
+  position: relative;
+  padding: 5rem 1.5rem 4rem;
+  background-image: url("https://images.pexels.com/photos/237272/pexels-photo-237272.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.gallery-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.8)
+  );
+  z-index: 0;
+}
+
+.gallery-hero .page-hero-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.gallery-hero .intro-label,
+.gallery-hero h1,
+.gallery-hero p {
+  color: #ffffff;
+}
+
+body.dark-theme .gallery-hero::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.95)
+  );
+}
+
+/* ===========================
+  MASONRY GALLERY
+  =========================== */
+
+.gallery-masonry {
+  column-count: 3;
+  column-gap: 1.1rem;
+  column-fill: balance;
+  margin-top: 2rem;
+}
+
+.gallery-tile {
+  
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  break-inside: avoid;
+  margin-bottom: 1.1rem;
+}
+
+.gallery-tile img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.gallery-tile:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.06);
+}
+
+/* Dark mode */
+body.dark-theme .gallery-tile {
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive columns */
+@media (max-width: 1000px) {
+  .gallery-masonry {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery-masonry {
+    column-count: 1;
+  }
+}
