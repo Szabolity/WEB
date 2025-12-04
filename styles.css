@@ -2913,7 +2913,7 @@ body.dark-theme .gallery-hero::before {
   =========================== */
 
 .gallery-masonry {
-  column-count: 3;
+  column-count: 2;
   column-gap: 1.1rem;
   column-fill: balance;
   margin-top: 2rem;
@@ -3035,3 +3035,4 @@ body.dark-theme .gallery-tile {
     right: 1rem;
   }
 }
+
