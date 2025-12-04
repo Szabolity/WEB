@@ -241,6 +241,7 @@ body.dark-theme .nav-book-button:hover {
     position: relative;
     width: 150px;
     padding-top: 75px;
+    z-index: 5000;
   }
 
     .nav-toggle {
@@ -2596,6 +2597,7 @@ body.dark-theme .gallery-tile {
     column-count: 1;
   }
 }
+
 
 
 
