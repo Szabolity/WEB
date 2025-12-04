@@ -2920,12 +2920,13 @@ body.dark-theme .gallery-hero::before {
 }
 
 .gallery-tile {
-  
+  display: inline-block;
   width: 100%;
+  margin: 0 0 1.1rem;
+  border-radius: 0.9rem;
   overflow: hidden;
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
   break-inside: avoid;
-  margin-bottom: 1.1rem;
 }
 
 .gallery-tile img {
