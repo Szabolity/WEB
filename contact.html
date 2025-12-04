@@ -136,31 +136,33 @@
     <!-- RIGHT SIDE: Contact form -->
     <div class="contact-form-wrapper">
 
-      <form class="contact-form" action="#" method="post">
+      <form class="contact-form" id="contactForm">
 
         <div class="form-group">
           <label>Your Name (required)</label>
-          <input type="text" required>
+          <input type="text" name="name" required>
         </div>
 
         <div class="form-group">
           <label>Your Email (required)</label>
-          <input type="email" required>
+          <input type="email" name="email" required>
         </div>
 
         <div class="form-group">
           <label>Subject</label>
-          <input type="text">
+          <input type="text" name="subject">
         </div>
 
         <div class="form-group">
           <label>Your Message</label>
-          <textarea rows="6"></textarea>
+          <textarea name="message" rows="6"></textarea>
         </div>
 
-        <button class="btn-primary" style="margin-top:0.5rem;">Send</button>
+        <button type="submit" class="btn-primary" style="margin-top:0.5rem;">Send</button>
 
       </form>
+
+      <div id="formMessage" style="margin-top: 1rem; display: none;"></div>
 
     </div>
 

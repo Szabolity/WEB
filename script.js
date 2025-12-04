@@ -191,3 +191,55 @@ if (faqItems.length) {
     });
   });
 }
+
+// ===========================
+// CONTACT FORM SUBMISSION
+// ===========================
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const formData = {
+      name: contactForm.querySelector('[name="name"]').value,
+      email: contactForm.querySelector('[name="email"]').value,
+      subject: contactForm.querySelector('[name="subject"]').value || "",
+      message: contactForm.querySelector('[name="message"]').value || "",
+    };
+
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const originalButtonText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "Sending...";
+
+    formMessage.style.display = "none";
+
+    try {
+      const response = await fetch("https://lyframes.8700900.xyz/salamangka/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        formMessage.textContent = "Thank you! Your message has been sent successfully. We'll get back to you soon.";
+        formMessage.style.color = "#171737ff";
+        formMessage.style.display = "block";
+        contactForm.reset();
+      } else {
+        throw new Error("Failed to send message");
+      }
+    } catch (error) {
+      formMessage.textContent = "Sorry, there was an error sending your message. Please try again later.";
+      formMessage.style.color = "#dc3545";
+      formMessage.style.display = "block";
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalButtonText;
+    }
+  });
+}
