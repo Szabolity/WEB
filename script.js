@@ -227,7 +227,7 @@ if (contactForm) {
 
       if (response.ok) {
         formMessage.textContent = "Thank you! Your message has been sent successfully. We'll get back to you soon.";
-        formMessage.style.color = "#171737ff";
+        formMessage.style.color = body.classList.contains("dark-theme") ? "#ffffff" : "#171737ff";
         formMessage.style.display = "block";
         contactForm.reset();
       } else {
